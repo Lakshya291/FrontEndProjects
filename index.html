@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Bootstrap files -->
+		<!-- CSS only -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<!-- JavaScript Bundle with Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- bootstrap icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+		/>
+		<!-- font awesome -->
+		<script src="https://kit.fontawesome.com/59e6a600a8.js"></script>
+
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- my Css -->
+		<link rel="stylesheet" href="style.css" />
+		<title>YouTube</title>
+	</head>
+	<body style="background-color: rgb(37, 37, 37)">
+		<!-- header -->
+		<header class="mt-2">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-1">
+						<div class="hamburger">
+							<div class="line"></div>
+							<div class="line"></div>
+							<div class="line"></div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<i
+							class="fa-brands fa-youtube fa-2x"
+							style="color: red; height: 30px"
+						></i>
+						<span
+							class="text-white fs-4"
+							style="font-family: 'Roboto', sans-serif"
+							>YouTube</span
+						>
+					</div>
+					<div class="col-sm-2"></div>
+					<div class="col-sm-4">
+						<div class="input-group">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="Search"
+								style="background-color: #121212; color: #ecf0f1"
+							/>
+							<i
+								class="input-group-text fa-solid fa-magnifying-glass"
+								id="addon-wrapping"
+								style="background-color: #373737; color: #ecf0f1"
+							></i>
+						</div>
+					</div>
+					<div class="col-sm-1"></div>
+					<div class="col-sm-2">
+						<div class="row">
+							<div class="col-sm-2">
+								<i class="fa-solid fa-video fa-2x" style="color: #ecf0f1"></i>
+							</div>
+							<div class="col-sm-1"></div>
+							<div class="col-sm-2">
+								<i class="fa-regular fa-bell fa-2x" style="color: #ecf0f1"></i>
+							</div>
+							<div class="col-sm-1"></div>
+
+							<div class="col-sm-2">
+								<i
+									class="fa-regular fa-circle-user fa-2x"
+									style="color: #ecf0f1"
+								></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<hr style="color: white" />
+		<br />
+		<!-- nav bar -->
+		<nav class="menu">
+			<div class="menu-nav ms-3">
+				<div class="list-items current mt-2">
+					<a href="#" class="nav-link disabled">
+						<i class="fa-solid fa-house fa-2x"></i>
+						<span class="fs-5 ps-2">Home</span>
+					</a>
+				</div>
+				<div class="list-items mt-2">
+					<a href="#" class="nav-link disabled">
+						<i class="fa-regular fa-compass fa-2x"></i>
+						<span class="fs-5 ps-2">Explore</span>
+					</a>
+				</div>
+				<div class="list-items mt-2">
+					<a href="#" class="nav-link disabled"
+						><i class="bi bi-file-play-fill fa-2x"></i>
+						<span class="fs-5 ps-2">Shorts</span>
+					</a>
+				</div>
+				<div class="list-items mt-2">
+					<a href="#" class="nav-link disabled">
+						<i class="bi bi-gear fa-2x"></i>
+						<span class="fs-5 ps-2">Settings</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+		<script>
+			const menuBtn = document.querySelector(".hamburger");
+
+			const menu = document.querySelector(".menu");
+
+			const menuNav = document.querySelector(".menu-nav");
+
+			const listItems = document.querySelectorAll(".list-items");
+
+			// Set the initial state of the menu
+			let showMenu = false;
+
+			menuBtn.addEventListener("click", toggleMenu);
+
+			function toggleMenu() {
+				if (!showMenu) {
+					menuBtn.classList.add("close");
+					menu.classList.add("show");
+					menuNav.classList.add("show");
+					listItems.forEach((item) => item.classList.add("show"));
+
+					// Reset the menu state
+					showMenu = true;
+				} else {
+					menuBtn.classList.remove("close");
+					menu.classList.remove("show");
+					menuNav.classList.remove("show");
+					listItems.forEach((item) => item.classList.remove("show"));
+
+					// Reset the menu state
+					showMenu = false;
+				}
+			}
+		</script>
+	</body>
+</html>

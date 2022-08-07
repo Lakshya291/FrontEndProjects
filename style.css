@@ -1,0 +1,75 @@
+/* Styling the menu button */
+.hamburger {
+	position: absolute;
+	z-index: 3;
+	cursor: pointer;
+	transition: all 0.5s ease-out;
+}
+
+/* Styling the hamburger lines */
+.hamburger .line {
+	width: 25px;
+	height: 3px;
+	background-color: #ecf0f1;
+	margin-block: 5px;
+	border-radius: 4px;
+	transition: transform 0.5s;
+}
+
+/* Adding transform to the X */
+.hamburger.close {
+	transform: rotate(180deg);
+}
+
+/* Styling the three lines to make it an X */
+.hamburger.close .line:nth-child(1) {
+	transform: rotate(45deg) translateY(11.5px);
+}
+.hamburger.close .line:nth-child(2) {
+	opacity: 0;
+}
+.hamburger.close .line:nth-child(3) {
+	transform: rotate(-45deg) translateY(-11.5px);
+}
+
+/* Styling the position of the menu icon */
+.menu {
+	position: fixed;
+	top: 62.9px;
+	width: 15%;
+	height: 100%;
+	opacity: 0.9;
+	visibility: hidden;
+}
+.list-items {
+	background-color: rgb(37, 37, 37);
+	color: #ecf0f1;
+	height: 40px;
+	text-align: start;
+}
+.list-items:hover {
+	background-color: #4d4d4d;
+}
+.list-items:active {
+	background-color: #383737;
+}
+.menu.show {
+	visibility: visible;
+}
+
+/* Adding a transition delay to the 4 items in the navigation menu */
+
+.list-items:nth-child(1) {
+	transition-delay: 0.1s;
+}
+
+.list-items:nth-child(2) {
+	transition-delay: 0.1s;
+}
+.list-items:nth-child(3) {
+	transition-delay: 0.1s;
+}
+
+.list-items:nth-child(4) {
+	transition-delay: 0.1s;
+}
