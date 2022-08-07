@@ -1,3 +1,6 @@
+.main-container.show {
+	opacity: 0.04;
+}
 /* Styling the menu button */
 .hamburger {
 	position: absolute;
@@ -36,16 +39,20 @@
 .menu {
 	position: fixed;
 	top: 62.9px;
-	width: 15%;
-	height: 100%;
-	opacity: 0.9;
 	visibility: hidden;
+	width: 18%;
+}
+.menu-nav {
+	height: 100vh;
+	background-color: rgb(20, 20, 20);
 }
 .list-items {
-	background-color: rgb(37, 37, 37);
+	padding: 50px 0px;
+	margin-inline-end: 10px 0;
+	margin-inline-start: 10px 0;
 	color: #ecf0f1;
 	height: 40px;
-	text-align: start;
+	text-align: center;
 }
 .list-items:hover {
 	background-color: #4d4d4d;
